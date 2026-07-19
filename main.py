@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 # Path fix karne wali lines
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from database.config import engine, Base, SessionLocal
+from config import engine, Base, SessionLocal
 
 app = FastAPI(
     title="Crypto Portfolio Tracker API",
