@@ -1,3 +1,4 @@
+import sys, os
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -5,6 +6,9 @@ from typing import List
 import requests
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import Session
+
+# Path fix karne wali lines
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from database.config import engine, Base, SessionLocal
 
 app = FastAPI(
